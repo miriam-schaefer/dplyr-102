@@ -1,0 +1,25 @@
+---
+title: "finance"
+author: "Miriam Schäfer"
+format: html
+editor: visual
+---
+
+```{r}
+#| message : false
+here::i_am("dplyr-102.Rproj")
+library(here)
+library(ggplot2)
+library(scales)
+library(tidyr)
+library(dplyr) 
+library(vroom)
+```
+
+
+```{r}
+account <- read.csv("data/account.csv")
+clients <- vroom(here("data", "client.csv")) 
+dlsp <- vroom(here("data", "disp.csv"))
+```
+
